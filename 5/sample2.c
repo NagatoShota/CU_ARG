@@ -7,9 +7,11 @@ int MOVE_COUNT;
 void ShellSort(int x[],int n){
     int i,j,k,tmp,gap;
 
+    // いい感じのギャプの取り方
     gap=1;
     while(n>gap) gap = gap*3 + 1;
     gap = (gap-1)/3;
+
     while(gap>0){
         for(k=0;k<gap;k++){
             for(j=k+gap;j<n;j=j+gap){
